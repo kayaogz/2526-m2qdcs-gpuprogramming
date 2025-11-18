@@ -24,9 +24,9 @@ Please also bring your laptop to the course; you will be using it during the lab
 ## Graded lab assignments
 Each lab assignment should be sent to the address `oguz.kaya[at]universite-paris-saclay.fr` with the subject format **"M2QDCSGPU LABX SURNAME(s) Name(s)"** (e.g., **M2QDCSGPU LAB3 ARNAULT-BARRAT Jean-François**) by 23:59 Sunday following the lab session. Solutions will be posted on the git repository just after this deadline; therefore, do not submit late! Please follow this format for the email subject **EXACTLY TO THE LETTER** as I will employ filters to sort these submissions.
 
-Please only attach source files (\*.cpp) to your email, **one .cpp file per exercise** (e.g., if the assignment has four exercises, your submission must have four cpp files), and please **do not zip the files**!
+Please only attach source files (\*.cu) to your email, **one .cu file per exercise** (e.g., if the assignment has four exercises, your submission must have four cu files), and please **do not zip the files**!
 
-If there are plots in some exercises, **do not** include them in the submission; those are only for your better understanding of the code's behavior, not for evaluation. If there are other questions/interpretations requiring textual response as part of an exercise, you can put your  at the very beginning of the corresponding source cpp file in a comment section.
+If there are plots in some exercises, **do not** include them in the submission; those are only for your better understanding of the code's behavior, not for evaluation. If there are other questions/interpretations requiring textual response as part of an exercise, you can put your  at the very beginning of the corresponding source cu file in a comment section.
 
 Out of all lab assignments, two of them will be randomly selected for grading, each providing up to 2,5/20 points.
 
