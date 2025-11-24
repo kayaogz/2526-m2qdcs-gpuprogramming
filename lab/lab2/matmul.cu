@@ -10,8 +10,8 @@
 // B est stocke par colonne, a savoir B(i, j) = B[i + j * N]
 float *A, *B, *C;
 
-// dA and dC are stored by rows, dC is stored by columns
-// dA et dC sont stockes par lignes, dC est stocke par colonne
+// dA and dC are stored by rows, dB is stored by columns
+// dA et dC sont stockes par lignes, dB est stocke par colonne
 float *dA, *dB, *dC;
 
 
