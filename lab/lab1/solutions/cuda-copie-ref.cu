@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 
   // Copier Ad dans Bd avec le kernel cudaCopieParBlocsThreads
   // A FAIRE ...
-  cudaCopieParBlocsThreads<<<(N + blockSize - 1)/blockSize, 1024>>>(Bd, Ad, N);
+  cudaCopieParBlocsThreads<<<(N + blockSize - 1)/blockSize, blockSize>>>(Bd, Ad, N);
 
   // Attendre que le kernel cudaCopieParBlocsThreads termine
   cudaerr = cudaDeviceSynchronize();
