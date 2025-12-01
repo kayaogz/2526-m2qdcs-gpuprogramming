@@ -30,8 +30,8 @@
 #define K 4
 #define BSXY 32
 
-// The matrix is stored by rows, that is A(i, j) = A[i + j * N]. The average should be computed on Aavg array.
-// La matrice A est stockee par lignes, a savoir A(i, j) = A[i + j * N]
+// The matrix is stored by columns, that is A(i, j) = A[i + j * N]. The average should be computed on Aavg array.
+// La matrice A est stockee par colonnes, a savoir A(i, j) = A[i + j * N]
 float *A;
 float *Aavg;
 
