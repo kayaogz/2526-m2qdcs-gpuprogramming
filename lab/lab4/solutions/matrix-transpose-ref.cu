@@ -22,7 +22,7 @@ __global__ void transposeGPU(float *dA, float *dAt, int n)
 {
   int i = threadIdx.y + blockIdx.x * blockDim.x;
   int j = threadIdx.x + blockIdx.y * blockDim.y;
-  if(i<n && j<n) dAt[i*n+j]=dA[j*n+i];
+  if(i<n && j<n) dAt[j * n + i]=dA[i * n + j];
 }
 __global__ void transposeGPUSharedMemoryA(float *dA, float *dAt, int n)
 {
@@ -35,9 +35,7 @@ __global__ void transposeGPUSharedMemoryA(float *dA, float *dAt, int n)
   {
     shA[threadIdx.y][threadIdx.x]=dA[i*n+j];
     __syncthreads();
-    i = threadIdx.y + blockIdx.y * blockDim.y;
-    j = threadIdx.x + blockIdx.x * blockDim.x;
-    dAt[i*n+j]=shA[threadIdx.x][threadIdx.y];
+    dAt[it*n+jt]=shA[threadIdx.x][threadIdx.y];
   }
 }
 __global__ void transposeGPUSharedMemoryBankConflicts(float *dA, float *dAt, int n)
@@ -51,9 +49,7 @@ __global__ void transposeGPUSharedMemoryBankConflicts(float *dA, float *dAt, int
   {
     shA[threadIdx.y][threadIdx.x]=dA[i*n+j];
     __syncthreads();
-    i = threadIdx.y + blockIdx.y * blockDim.y;
-    j = threadIdx.x + blockIdx.x * blockDim.x;
-    dAt[i*n+j]=shA[threadIdx.x][threadIdx.y];
+    dAt[it*n+jt]=shA[threadIdx.x][threadIdx.y];
   }
 }
 __global__ void transposeGPUSharedMemoryInplaceA(float *dA, int n)
